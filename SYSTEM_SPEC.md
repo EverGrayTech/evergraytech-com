@@ -6,7 +6,7 @@
 
 **Problem**: As a solo founder launching EverGray Tech, there's a need for a professional digital presence that:
 - Establishes credibility and trust with potential clients
-- Communicates 20+ years of technical leadership experience
+- Communicates extensive technical leadership experience
 - Positions services across multiple domains (consulting, development, open source)
 - Provides an easy way for prospects to make contact
 - Supports iterative growth as the business evolves
@@ -43,124 +43,43 @@
 - User-centered, sustainable solutions
 - Continuous learning and positive impact
 
-## 3. Architectural Overview
+## 3. Contact Information
+- **Email**: hello@EverGrayTech.com
+- **LinkedIn**: https://www.linkedin.com/company/EverGrayTech
+- **Personal LinkedIn**: https://www.linkedin.com/in/allen-rose
+- **Phone**: 310-923-6769
+- **Location**: Los Angeles, CA
 
-### Technology Stack
-- **Frontend**: Static HTML5, CSS3, vanilla JavaScript
-- **Hosting**: GitHub Pages (current) → AWS migration planned
-- **Domain**: evergraytech.com (via CNAME)
-- **Assets**: SVG logo with gradient (burgundy to navy blue)
-- **Version Control**: Git (GitHub repository)
+## 4. Technical Architecture
 
-### Technical Principles
-- **Simplicity First**: Static site for easy maintenance and hosting
-- **Performance**: Fast load times, minimal dependencies
-- **Accessibility**: WCAG 2.1 AA compliance minimum
-- **Mobile-First**: Responsive design for all device sizes
-- **Progressive Enhancement**: Core content accessible without JavaScript
-- **SEO-Ready**: Semantic HTML, meta tags, structured data
+See [Technical Requirements](.agent/.clinerules/technical-requirements.md) for detailed technical specifications.
 
-## 4. Phase 1 Requirements (MVP)
+**Summary**:
+- Static HTML5, CSS3, vanilla JavaScript
+- GitHub Pages → AWS migration planned
+- Mobile-first, accessible, performant
+- Simple, maintainable codebase
 
-### Scope: Minimal Professional Presence
-The initial release focuses on establishing credibility with minimal complexity.
+## 5. Current Phase: MVP
 
-#### Required Content
-1. **Hero Section**
-   - EverGray Tech logo (evergray_tech.svg)
-   - Tagline/value proposition
-   - Brief introduction to Allen Rose and services
-   
-2. **About/Overview**
-   - Professional summary highlighting 20+ years experience
-   - Key competencies and technical scope
-   - Industry-agnostic positioning
-   - Link to resume (RoseAllenM_resume.pdf)
-   
-3. **Contact Information**
-   - Email: hello@EverGrayTech.com
-   - LinkedIn: https://www.linkedin.com/company/EverGrayTech
-   - Phone: 310-923-6769
-   - Location: Los Angeles, CA
-   - Simple contact method (email link or basic form)
+See [Phase 1 MVP Plan](.agent/plans/phase-1-mvp.md) for complete requirements and checklist.
 
-#### Design Requirements
-- **Aesthetic**: Clean, modern, dark-mode focused
-- **Personality**: Professional but not corporate; sophisticated and approachable
-- **Color Palette**: 
-  - Primary: Gradient from burgundy (#6C0E23) through navy (#12263A) to blue (#2B5C8C) - from logo
-  - Background: Dark (charcoal/near-black)
-  - Text: Light/white with good contrast
-  - Accents: Derived from logo gradient
-- **Typography**: 
-  - Clean, modern sans-serif
-  - Excellent readability
-  - Professional hierarchy
-- **Layout**: 
-  - Single-page or minimal multi-page
-  - Clear visual hierarchy
-  - Generous whitespace
-  - Mobile-responsive breakpoints
+**Key Deliverables**:
+- Hero section with logo and value proposition
+- Professional overview with resume link
+- Contact information and simple contact method
+- Dark-mode aesthetic with logo gradient colors
+- Mobile-responsive, accessible design
 
-#### Technical Requirements
-- Valid, semantic HTML5
-- Modern CSS (Grid/Flexbox for layout)
-- Minimal or no JavaScript for core functionality
-- Optimized images and assets
-- Fast page load (<2 seconds on 3G)
-- Cross-browser compatibility (modern browsers)
-- Mobile-responsive (320px to 4K)
-- Accessible (keyboard navigation, screen readers, ARIA where needed)
+## 6. Future Roadmap
 
-## 5. Future Expansion (Post-MVP)
+See [Future Phases](.agent/plans/future-phases.md) for detailed expansion plans.
 
-### Planned Phases
-While not in scope for Phase 1, the architecture should accommodate:
-
-**Phase 2: Enhanced Content**
-- Detailed service offerings (consulting, development, open source)
-- Case studies or project highlights
-- Testimonials/references
-- Expanded about section
-
-**Phase 3: Thought Leadership**
-- Blog/articles section
-- Technical writing samples
-- Open source project showcase
-- Speaking engagements/presentations
-
-**Phase 4: Interactive Features**
-- Contact form with validation
-- Newsletter signup
-- Project inquiry form
-- Calendar integration for consultations
-
-**Phase 5: Advanced**
-- CMS integration for content management
-- Analytics and conversion tracking
-- A/B testing capabilities
-- SEO optimization and content strategy
-
-### Migration Considerations
-- Design should be portable to AWS hosting
-- Structure should support future CMS integration
-- Code should be modular for easy enhancement
-- Consider static site generator migration path (Hugo, Jekyll, 11ty)
-
-## 6. Success Metrics
-
-### Phase 1 Goals
-- **Professional Credibility**: Site looks polished and trustworthy when shared with prospects
-- **Expertise Showcase**: Clearly communicates technical leadership capabilities
-- **Accessibility**: Easy for prospects to understand services and make contact
-- **Technical Quality**: Fast, accessible, works on all devices
-
-### Future Metrics (Post-MVP)
-- Contact form submissions / email inquiries
-- Time on site and engagement
-- SEO visibility for relevant keywords
-- Conversion rate from visitor to inquiry
-- Professional network sharing and referrals
+**Upcoming**:
+- Phase 2: Enhanced content (services, case studies, testimonials)
+- Phase 3: Thought leadership (blog, projects, speaking)
+- Phase 4: Interactive features (forms, newsletter, calendar)
+- Phase 5: Advanced (CMS, analytics, optimization)
 
 ## 7. Content Strategy
 
@@ -172,7 +91,7 @@ While not in scope for Phase 1, the architecture should accommodate:
 - **Forward-thinking**: AI-enabled, modern practices, continuous improvement
 
 ### Key Messages
-1. **Experience**: 20+ years of technical leadership in complex, high-stakes environments
+1. **Experience**: Extensive technical leadership in complex, high-stakes environments
 2. **Versatility**: Industry-agnostic expertise applicable across domains
 3. **Results**: Proven ability to deliver scalable, reliable systems
 4. **Leadership**: Cross-functional team leadership and stakeholder alignment
@@ -188,11 +107,11 @@ While not in scope for Phase 1, the architecture should accommodate:
 - Custom software development
 - Technical strategy consulting
 
-## 8. Design System (Phase 1)
+## 8. Design System
 
 ### Color Palette
 ```
-Primary Gradient: 
+Primary Gradient (from logo): 
   - Burgundy: #6C0E23
   - Navy: #12263A
   - Blue: #2B5C8C
@@ -240,61 +159,35 @@ Scale: 8, 16, 24, 32, 48, 64, 96, 128px
 
 ## 9. File Structure
 
+See [File Organization Plan](.agent/plans/00-file-organization.md) for detailed organization strategy.
+
+**Current Structure**:
 ```
 evergraytech_com/
-├── index.html              # Main landing page
-├── styles.css              # Global styles
-├── SYSTEM_SPEC.md          # This document
-├── README.md               # Project documentation
-├── LICENSE                 # License information
-├── CNAME                   # Domain configuration
-├── .gitignore              # Git ignore rules
+├── .agent/                     # Development guidelines and plans
+│   ├── .clinerules/           # Development workflow and requirements
+│   └── plans/                 # Phase plans and organization
+├── index.html                  # Main landing page
+├── styles.css                  # Global styles
 ├── images/
-│   └── evergray_tech.svg   # Logo
-├── assets/                 # Future: additional images, icons
-├── scripts/                # Future: JavaScript files
-└── RoseAllenM_resume.pdf   # Resume download
+│   └── evergray_tech.svg      # Logo
+├── RoseAllenM_resume.pdf      # Resume download
+├── SYSTEM_SPEC.md             # This document
+├── README.md                  # Project documentation
+├── LICENSE                    # License information
+├── CNAME                      # Domain configuration
+└── .gitignore                 # Git ignore rules
 ```
 
-## 10. Development Workflow
+## 10. Development Guidelines
 
-### Spec-Driven Development Protocol
-1. **Specification**: This SYSTEM_SPEC defines requirements
-2. **Design**: Create mockups/wireframes aligned with spec
-3. **Implementation**: Build according to spec and design
-4. **Review**: Validate against requirements
-5. **Iterate**: Gather feedback and refine
-6. **Deploy**: Push to GitHub Pages
-7. **Monitor**: Track performance and user feedback
+See [Development Workflow](.agent/.clinerules/development-workflow.md) for complete development standards and processes.
 
-### Quality Standards
-- **Code Quality**: 
-  - Valid HTML5 (W3C validator)
-  - Modern CSS best practices
-  - Commented code for maintainability
-  - Consistent formatting and naming conventions
-  
-- **Performance**:
-  - Lighthouse score: 90+ across all categories
-  - Page load: <2 seconds on 3G
-  - Optimized images (SVG for logo, WebP for photos)
-  
-- **Accessibility**:
-  - WCAG 2.1 AA minimum
-  - Keyboard navigable
-  - Screen reader compatible
-  - Sufficient color contrast (4.5:1 minimum)
-  
-- **Browser Support**:
-  - Modern browsers (last 2 versions)
-  - Chrome, Firefox, Safari, Edge
-  - Mobile Safari, Chrome Mobile
-
-### Version Control
-- Main branch: production-ready code
-- Feature branches for development
-- Meaningful commit messages
-- Tag releases (v1.0.0, v1.1.0, etc.)
+**Key Principles**:
+- Spec-driven development
+- Quality standards (code, performance, accessibility)
+- Version control best practices
+- Iterative deployment and monitoring
 
 ## 11. Constraints and Considerations
 
@@ -340,38 +233,25 @@ evergraytech_com/
 | Hard to maintain | Low | Simple tech stack, well-documented code |
 | GitHub Pages limitations | Low | Plan AWS migration path, keep portable |
 
-## 13. Launch Checklist
+## 13. Related Documents
 
-### Pre-Launch
-- [ ] Content finalized and proofread
-- [ ] Design approved
-- [ ] All links tested
-- [ ] Mobile responsive verified
-- [ ] Accessibility tested
-- [ ] Performance optimized (Lighthouse)
-- [ ] Cross-browser tested
-- [ ] SEO meta tags added
-- [ ] Favicon created
-- [ ] CNAME configured
-- [ ] SSL/HTTPS working
+### Development Guidelines
+- [Technical Requirements](.agent/.clinerules/technical-requirements.md)
+- [Development Workflow](.agent/.clinerules/development-workflow.md)
 
-### Post-Launch
-- [ ] Share with professional network
-- [ ] Update LinkedIn with website link
-- [ ] Monitor for issues
-- [ ] Gather feedback
-- [ ] Plan Phase 2 enhancements
+### Project Plans
+- [File Organization Plan](.agent/plans/00-file-organization.md)
+- [Phase 1 MVP](.agent/plans/phase-1-mvp.md)
+- [Future Phases](.agent/plans/future-phases.md)
 
-## 14. Appendix
-
-### References
-- Resume: RoseAllenM_resume.pdf
-- LinkedIn: https://www.linkedin.com/in/allen-rose
-- Repository: git@github.com:EverGrayTech/evergraytech_com.git
-
-### Related Documents
+### Project Files
 - README.md: Project overview and setup instructions
 - LICENSE: Project license information
+- RoseAllenM_resume.pdf: Professional resume
 
-### Revision History
+### Repository
+- GitHub: git@github.com:EverGrayTech/evergraytech_com.git
+
+## 14. Revision History
+- v1.1 (2026-02-21): Reorganized content into .agent/ structure, reduced repetition
 - v1.0 (2026-02-21): Initial specification for Phase 1 MVP
