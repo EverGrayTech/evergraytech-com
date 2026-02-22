@@ -1,0 +1,18 @@
+{
+  "template": "https://github.com/EverGrayTech/package_templates.git",
+  "commit": "5367362eaf38f481d156348cd7b2efc2136452a8",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "full_name": "Allen Rose",
+      "email": "RoseAllenM@gmail.com",
+      "package_name": "EverGray Tech .com",
+      "package_slug": "evergraytech_com",
+      "package_url": "https://github.com/RoseAllenM/evergray_com.git",
+      "description": "The files backing the [evergraytech.com](https://evergraytech.com) website.",
+      "_template": "https://github.com/EverGrayTech/package_templates.git",
+      "_commit": "5367362eaf38f481d156348cd7b2efc2136452a8"
+    }
+  },
+  "directory": "python"
+}
