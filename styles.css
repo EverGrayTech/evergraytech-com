@@ -672,6 +672,13 @@ section + section {
         color: black;
     }
     
+    /* Ensure scroll-reveal elements are always visible when printing */
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+    
     .cta-button,
     .button-secondary {
         border: 1px solid black;
