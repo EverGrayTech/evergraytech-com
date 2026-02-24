@@ -582,6 +582,32 @@ section + section {
 }
 
 /* ============================================
+   Scroll Reveal Animations
+   ============================================ */
+
+/* Initial hidden state - only applied when motion is allowed */
+@media (prefers-reduced-motion: no-preference) {
+    .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+            opacity 0.7s var(--ease-out),
+            transform 0.7s var(--ease-out);
+    }
+
+    .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Stagger children using CSS custom property set by JS */
+    .reveal[data-delay="1"] { transition-delay: 0.1s; }
+    .reveal[data-delay="2"] { transition-delay: 0.2s; }
+    .reveal[data-delay="3"] { transition-delay: 0.3s; }
+    .reveal[data-delay="4"] { transition-delay: 0.4s; }
+}
+
+/* ============================================
    Accessibility
    ============================================ */
 .sr-only {
