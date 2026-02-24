@@ -9,13 +9,25 @@
    height="1530"
    viewBox="-3 -3 1530 1530"
    id="svg3"
-  <title id="logo-title">EverGray Tech Logo</title>
-  <desc id="logo-desc">A stylized letter 'e' and 'g' forming the EverGray Tech brand mark, rendered in a gradient from burgundy to navy to blue</desc>
    sodipodi:docname="evergray_tech.svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <title id="logo-title">EverGray Tech Logo</title>
+  <desc id="logo-desc">A stylized letter 'e' and 'g' forming the EverGray Tech brand mark, rendered in a gradient from burgundy to navy to blue</desc>
+  <metadata>
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+            xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+         <dc:title>EverGray Tech Logo</dc:title>
+         <dc:creator>Allen Rose</dc:creator>
+         <dc:rights>Copyright © 2026 EverGray Tech. All rights reserved.</dc:rights>
+         <dc:date>2026</dc:date>
+         <dc:format>image/svg+xml</dc:format>
+      </rdf:Description>
+   </rdf:RDF>
+  </metadata>
   <sodipodi:namedview
      id="namedview3"
      pagecolor="#505050"
