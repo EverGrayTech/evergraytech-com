@@ -10,56 +10,72 @@
     --color-burgundy: #6C0E23;
     --color-navy: #12263A;
     --color-blue: #2B5C8C;
-    
+
+    /* Primary Gradient (use sparingly as accent) */
+    --gradient-primary: linear-gradient(135deg, #6C0E23 0%, #12263A 50%, #2B5C8C 100%);
+
     /* Background Colors */
     --color-bg-dark: #0A0A0A;
-    --color-bg-surface: #1A1A1A;
-    --color-bg-surface-light: #252525;
-    
-    /* Text Colors */
-    --color-text-primary: #FFFFFF;
-    --color-text-secondary: #D0D0D0;
-    --color-text-muted: #808080;
-    
-    /* Gradient */
-    --gradient-primary: linear-gradient(135deg, var(--color-burgundy) 0%, var(--color-navy) 50%, var(--color-blue) 100%);
-    --gradient-subtle: linear-gradient(180deg, rgba(108, 14, 35, 0.1) 0%, rgba(18, 38, 58, 0.1) 50%, rgba(43, 92, 140, 0.1) 100%);
-    
+    --color-bg-surface: #0F0F0F;
+    --color-bg-elevated: #1A1A1A;
+
+    /* Text Colors - WCAG AA compliant */
+    --color-text-primary: #FFFFFF;       /* ~21:1 contrast on dark */
+    --color-text-secondary: #D4D4D4;     /* ~12:1 contrast on dark */
+    --color-text-muted: #9CA3AF;         /* ~7:1 contrast on dark */
+
+    /* Interactive */
+    --color-link: #60A5FA;
+    --color-link-hover: #93C5FD;
+
+    /* Borders */
+    --color-border-subtle: rgba(255, 255, 255, 0.06);
+    --color-border-medium: rgba(255, 255, 255, 0.12);
+    --color-border-strong: rgba(255, 255, 255, 0.22);
+
+    /* Glass effects */
+    --glass-bg: rgba(255, 255, 255, 0.04);
+
     /* Typography */
-    --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    --font-weight-light: 300;
+    --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
-    --font-weight-bold: 700;
-    
+
     /* Font Sizes - Responsive with clamp() */
-    --font-size-h1: clamp(2.5rem, 5vw, 4rem);
-    --font-size-h2: clamp(2rem, 4vw, 3rem);
-    --font-size-h3: clamp(1.5rem, 3vw, 2rem);
-    --font-size-body: clamp(1rem, 2vw, 1.125rem);
-    --font-size-small: 0.875rem;
-    --font-size-large: clamp(1.125rem, 2.5vw, 1.25rem);
-    
+    --font-size-h1: clamp(2.75rem, 6vw, 4.5rem);
+    --font-size-h2: clamp(2rem, 4vw, 3.25rem);
+    --font-size-h3: clamp(1.375rem, 2.5vw, 1.75rem);
+    --font-size-body: clamp(1.0625rem, 2vw, 1.1875rem);
+    --font-size-small: 0.9375rem;
+    --font-size-large: clamp(1.125rem, 2.5vw, 1.3125rem);
+
     /* Spacing System (8px base) */
     --space-1: 8px;
     --space-2: 16px;
     --space-3: 24px;
     --space-4: 32px;
+    --space-5: 40px;
     --space-6: 48px;
     --space-8: 64px;
+    --space-10: 80px;
     --space-12: 96px;
     --space-16: 128px;
-    
+    --space-20: 160px;
+
     /* Layout */
     --container-max-width: 1200px;
     --container-padding: var(--space-3);
-    
+
+    /* Easing functions */
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out: cubic-bezier(0.0, 0, 0.2, 1);
+
     /* Transitions */
-    --transition-fast: 150ms ease-in-out;
-    --transition-base: 250ms ease-in-out;
-    --transition-slow: 400ms ease-in-out;
-    
+    --transition-fast: 150ms var(--ease-smooth);
+    --transition-base: 300ms var(--ease-smooth);
+    --transition-slow: 450ms var(--ease-smooth);
+
     /* Border Radius */
     --radius-sm: 4px;
     --radius-md: 8px;
@@ -85,9 +101,11 @@ body {
     font-family: var(--font-family-base);
     font-size: var(--font-size-body);
     font-weight: var(--font-weight-normal);
-    line-height: 1.6;
+    line-height: 1.75;
     color: var(--color-text-primary);
-    background-color: var(--color-bg-dark);
+    /* Unified background - prevents scroll jank from per-section backgrounds */
+    background: linear-gradient(180deg, var(--color-bg-dark) 0%, #0D0D0D 50%, var(--color-bg-dark) 100%);
+    background-attachment: fixed;
     min-height: 100vh;
 }
 
@@ -95,8 +113,9 @@ body {
    Typography
    ============================================ */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: var(--font-weight-bold);
-    line-height: 1.2;
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
     margin-bottom: var(--space-3);
 }
 
@@ -122,27 +141,55 @@ p:last-child {
 
 .lead {
     font-size: var(--font-size-large);
-    font-weight: var(--font-weight-medium);
-    color: var(--color-text-primary);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+    letter-spacing: -0.01em;
 }
 
 /* ============================================
    Links
    ============================================ */
 a {
-    color: var(--color-blue);
+    color: var(--color-link);
     text-decoration: none;
     transition: color var(--transition-fast);
 }
 
 a:hover {
-    color: var(--color-text-primary);
+    color: var(--color-link-hover);
 }
 
 a:focus-visible {
     outline: 2px solid var(--color-blue);
     outline-offset: 4px;
     border-radius: var(--radius-sm);
+}
+
+/* Elegant text link with animated underline */
+.text-link {
+    color: var(--color-text-secondary);
+    position: relative;
+    display: inline-block;
+}
+
+.text-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gradient-primary);
+    transition: width var(--transition-base);
+}
+
+.text-link:hover {
+    color: var(--color-text-primary);
+}
+
+.text-link:hover::after {
+    width: 100%;
 }
 
 /* ============================================
@@ -155,13 +202,18 @@ a:focus-visible {
 }
 
 section {
-    padding: var(--space-12) 0;
+    padding: var(--space-16) 0;
 }
 
 @media (min-width: 768px) {
     section {
-        padding: var(--space-16) 0;
+        padding: var(--space-20) 0;
     }
+}
+
+/* Subtle section separators instead of jarring background switches */
+section + section {
+    border-top: 1px solid var(--color-border-subtle);
 }
 
 /* ============================================
@@ -172,39 +224,46 @@ section {
     display: inline-flex;
     align-items: center;
     gap: var(--space-2);
-    padding: var(--space-2) var(--space-4);
-    font-size: var(--font-size-body);
-    font-weight: var(--font-weight-semibold);
     text-decoration: none;
     border-radius: var(--radius-md);
     transition: all var(--transition-base);
     cursor: pointer;
-    border: 2px solid transparent;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: var(--font-size-small);
 }
 
+/* Primary CTA: Elegant glass effect - understated, not garish */
 .cta-button {
-    background: var(--gradient-primary);
+    background: var(--glass-bg);
     color: var(--color-text-primary);
-    box-shadow: 0 4px 12px rgba(108, 14, 35, 0.3);
+    border: 1.5px solid var(--color-border-medium);
+    padding: 14px 36px;
+    backdrop-filter: blur(10px);
 }
 
 .cta-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-border-strong);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(108, 14, 35, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     color: var(--color-text-primary);
 }
 
+/* Secondary button: Minimal, understated */
 .button-secondary {
-    background: var(--color-bg-surface-light);
-    color: var(--color-text-primary);
-    border-color: var(--color-blue);
+    background: transparent;
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border-medium);
+    padding: 12px 28px;
 }
 
 .button-secondary:hover {
-    background: var(--color-bg-surface);
-    border-color: var(--color-text-primary);
-    transform: translateY(-2px);
     color: var(--color-text-primary);
+    border-color: var(--color-border-strong);
+    background: var(--glass-bg);
+    transform: translateY(-1px);
 }
 
 /* ============================================
@@ -215,20 +274,34 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--gradient-subtle);
     position: relative;
     overflow: hidden;
 }
 
+/* Subtle dual-source ambient glow */
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(108, 14, 35, 0.15) 0%, transparent 70%);
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 30% 50%, rgba(43, 92, 140, 0.06) 0%, transparent 55%),
+        radial-gradient(ellipse at 70% 30%, rgba(108, 14, 35, 0.06) 0%, transparent 50%);
     pointer-events: none;
+}
+
+/* Very subtle animated ambient shift */
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 60%, rgba(108, 14, 35, 0.05) 0%, transparent 60%);
+    animation: ambientShift 20s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes ambientShift {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
 }
 
 .hero-content {
@@ -242,26 +315,39 @@ section {
 .hero-logo {
     width: clamp(120px, 20vw, 200px);
     height: auto;
-    margin-bottom: var(--space-4);
-    filter: drop-shadow(0 4px 12px rgba(108, 14, 35, 0.3));
+    margin-bottom: var(--space-5);
+    filter: drop-shadow(0 4px 16px rgba(108, 14, 35, 0.25));
 }
 
+/* Company name: Solid white for clarity and brand impact */
 .hero-title {
     font-size: var(--font-size-h1);
-    font-weight: var(--font-weight-bold);
-    margin-bottom: var(--space-3);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: -0.03em;
+    color: var(--color-text-primary);
+    text-shadow: 0 2px 20px rgba(108, 14, 35, 0.2);
+    margin-bottom: var(--space-2);
+}
+
+/* Gradient accent bar beneath title - gradient as elegant accent, not on text */
+.hero-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
     background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    margin: var(--space-3) auto 0;
+    border-radius: 2px;
+    opacity: 0.8;
 }
 
 .hero-tagline {
     font-size: var(--font-size-large);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-normal);
     color: var(--color-text-secondary);
-    margin-bottom: var(--space-4);
-    font-style: italic;
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-3);
+    letter-spacing: 0.01em;
 }
 
 .hero-intro {
@@ -269,18 +355,22 @@ section {
     color: var(--color-text-secondary);
     margin-bottom: var(--space-6);
     line-height: 1.8;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ============================================
    About Section
    ============================================ */
+/* Transparent - unified body background handles depth */
 .about {
-    background-color: var(--color-bg-surface);
+    background: transparent;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-10);
     position: relative;
 }
 
@@ -288,10 +378,11 @@ section {
     content: '';
     display: block;
     width: 60px;
-    height: 4px;
+    height: 3px;
     background: var(--gradient-primary);
     margin: var(--space-3) auto 0;
     border-radius: 2px;
+    opacity: 0.7;
 }
 
 .about-content {
@@ -300,7 +391,7 @@ section {
 }
 
 .about-summary {
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-10);
 }
 
 .about-summary p {
@@ -312,7 +403,7 @@ section {
 }
 
 .competencies {
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-10);
 }
 
 .competencies h3 {
@@ -324,87 +415,110 @@ section {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--space-3);
+    gap: var(--space-2);
 }
 
 .competencies-list li {
-    padding: var(--space-3);
-    background: var(--color-bg-dark);
-    border-left: 3px solid var(--color-blue);
+    padding: var(--space-3) var(--space-4);
+    background: var(--glass-bg);
+    border-left: 2px solid rgba(43, 92, 140, 0.35);
     border-radius: var(--radius-sm);
     color: var(--color-text-secondary);
     transition: all var(--transition-base);
+    font-size: var(--font-size-small);
+    letter-spacing: 0.01em;
 }
 
 .competencies-list li:hover {
-    border-left-color: var(--color-burgundy);
+    background: rgba(255, 255, 255, 0.06);
+    border-left-color: var(--color-blue);
     transform: translateX(4px);
-    background: var(--color-bg-surface-light);
+    color: var(--color-text-primary);
 }
 
 .industry-positioning {
-    margin-bottom: var(--space-8);
-    padding: var(--space-4);
-    background: var(--color-bg-dark);
+    margin-bottom: var(--space-10);
+    padding: var(--space-4) var(--space-5);
+    background: var(--glass-bg);
     border-radius: var(--radius-md);
-    border: 1px solid rgba(43, 92, 140, 0.2);
+    border: 1px solid var(--color-border-subtle);
 }
 
 .industry-positioning p {
     color: var(--color-text-secondary);
     margin-bottom: 0;
+    font-style: italic;
 }
 
 .resume-link {
     text-align: center;
 }
 
+/* Leadership subsection */
+.leadership {
+    margin-top: var(--space-10);
+    padding-top: var(--space-8);
+    border-top: 1px solid var(--color-border-subtle);
+}
+
+.leadership h3 {
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-4);
+}
+
+.leadership p {
+    color: var(--color-text-secondary);
+}
+
 /* ============================================
    Contact Section
    ============================================ */
 .contact {
-    background: var(--gradient-subtle);
+    background: transparent;
 }
 
 .section-subtitle {
     text-align: center;
     font-size: var(--font-size-large);
     color: var(--color-text-secondary);
-    margin-bottom: var(--space-8);
-    max-width: 700px;
+    margin-bottom: var(--space-10);
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.6;
 }
 
 .contact-info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--space-6);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-4);
     max-width: 900px;
     margin: 0 auto;
 }
 
 .contact-item {
-    background: var(--color-bg-surface);
+    background: var(--glass-bg);
     padding: var(--space-4);
     border-radius: var(--radius-md);
-    border: 1px solid rgba(43, 92, 140, 0.2);
-    transition: all var(--transition-base);
+    border: 1px solid var(--color-border-subtle);
+    transition: all 0.4s var(--ease-smooth);
 }
 
 .contact-item:hover {
-    border-color: var(--color-blue);
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border-color: var(--color-border-medium);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .contact-item h3 {
-    font-size: var(--font-size-body);
+    font-size: 0.75rem;
     font-weight: var(--font-weight-semibold);
-    color: var(--color-blue);
+    color: var(--color-text-muted);
     margin-bottom: var(--space-2);
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.1em;
+    line-height: 1;
 }
 
 .contact-link {
@@ -427,9 +541,9 @@ section {
    Footer
    ============================================ */
 .footer {
-    background-color: var(--color-bg-dark);
+    background-color: transparent;
     padding: var(--space-6) 0;
-    border-top: 1px solid rgba(43, 92, 140, 0.2);
+    border-top: 1px solid var(--color-border-subtle);
 }
 
 .footer .container {
@@ -486,6 +600,19 @@ section {
 *:focus-visible {
     outline: 2px solid var(--color-blue);
     outline-offset: 4px;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
 }
 
 /* ============================================
