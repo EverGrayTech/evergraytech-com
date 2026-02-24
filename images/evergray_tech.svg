@@ -4,9 +4,13 @@
 <svg
    version="1.1"
    width="1530"
+   role="img"
+   aria-labelledby="logo-title logo-desc"
    height="1530"
    viewBox="-3 -3 1530 1530"
    id="svg3"
+  <title id="logo-title">EverGray Tech Logo</title>
+  <desc id="logo-desc">A stylized letter 'e' and 'g' forming the EverGray Tech brand mark, rendered in a gradient from burgundy to navy to blue</desc>
    sodipodi:docname="evergray_tech.svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
