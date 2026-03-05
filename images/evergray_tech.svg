@@ -35,9 +35,9 @@
      borderopacity="1" />
   <defs>
     <linearGradient id="GradientColor">
-      <stop offset="0%" style="stop-color:#6C0E23;"/>
-      <stop offset="50%" style="stop-color:#12263A;" />
-      <stop offset="100%" style="stop-color:#2B5C8C;" />
+      <stop offset="0%" style="stop-color:#A21534;"/>
+      <stop offset="50%" style="stop-color:#0F263D;" />
+      <stop offset="100%" style="stop-color:#3A7ABB;" />
     </linearGradient>
     <linearGradient
        xlink:href="#GradientColor"
