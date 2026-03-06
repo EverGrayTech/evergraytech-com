@@ -112,9 +112,9 @@ See [Future Phases](.agent/plans/future-phases.md) for detailed expansion plans.
 ### Color Palette
 ```
 Primary Gradient (from logo): 
-  - Burgundy: #6C0E23
-  - Navy: #12263A
-  - Blue: #2B5C8C
+  - Burgundy: #A21534
+  - Navy: #0F263D
+  - Blue: #3A7ABB
 
 Background:
   - Dark: #0A0A0A - #1A1A1A

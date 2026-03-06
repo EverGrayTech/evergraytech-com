@@ -7,12 +7,12 @@
    ============================================ */
 :root {
     /* Color Palette - From Logo Gradient */
-    --color-burgundy: #6C0E23;
-    --color-navy: #12263A;
-    --color-blue: #2B5C8C;
+    --color-burgundy: #A21534;
+    --color-navy: #0F263D;
+    --color-blue: #3A7ABB;
 
     /* Primary Gradient (use sparingly as accent) */
-    --gradient-primary: linear-gradient(135deg, #6C0E23 0%, #12263A 50%, #2B5C8C 100%);
+    --gradient-primary: linear-gradient(135deg, #A21534 0%, #0F263D 50%, #3A7ABB 100%);
 
     /* Background Colors */
     --color-bg-dark: #0A0A0A;

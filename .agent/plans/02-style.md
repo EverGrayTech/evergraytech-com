@@ -269,9 +269,9 @@ section + section::before {
   
   <defs>
     <linearGradient id="GradientColor">
-      <stop offset="0%" style="stop-color:#6C0E23;"/>
-      <stop offset="50%" style="stop-color:#12263A;" />
-      <stop offset="100%" style="stop-color:#2B5C8C;" />
+      <stop offset="0%" style="stop-color:#A21534;"/>
+      <stop offset="50%" style="stop-color:#0F263D;" />
+      <stop offset="100%" style="stop-color:#3A7ABB;" />
     </linearGradient>
     <!-- ... rest of SVG ... -->
   </defs>
@@ -648,10 +648,10 @@ a {
 ```css
 :root {
     /* Primary Gradient (use sparingly as accent) */
-    --color-burgundy: #6C0E23;
-    --color-navy: #12263A;
-    --color-blue: #2B5C8C;
-    --gradient-primary: linear-gradient(135deg, #6C0E23 0%, #12263A 50%, #2B5C8C 100%);
+    --color-burgundy: #A21534;
+    --color-navy: #0F263D;
+    --color-blue: #3A7ABB;
+    --gradient-primary: linear-gradient(135deg, #A21534 0%, #0F263D 50%, #3A7ABB 100%);
     
     /* Backgrounds */
     --color-bg-dark: #0A0A0A;
