@@ -20,7 +20,7 @@
   ├── index.html                  # ✓ Main landing page
   ├── styles.css                  # ✓ Global styles
   ├── RoseAllenM_resume.pdf      # ✓ Resume (root for easy linking)
-  ├── SYSTEM_SPEC.md             # ✓ System specification
+  ├── system-spec.md             # ✓ System specification
   ├── README.md                  # ✓ Project documentation
   ├── LICENSE                    # ✓ License information
   ├── CNAME                      # ✓ Domain configuration
