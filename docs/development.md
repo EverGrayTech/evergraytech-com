@@ -1,7 +1,7 @@
 # Development Workflow
 
 ## Spec-Driven Development Protocol
-1. **Specification**: SYSTEM_SPEC defines requirements
+1. **Specification**: system-spec defines requirements
 2. **Design**: Create mockups/wireframes aligned with spec
 3. **Implementation**: Build according to spec and design
 4. **Review**: Validate against requirements

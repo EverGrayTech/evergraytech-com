@@ -52,7 +52,7 @@
 
 ## 4. Technical Architecture
 
-See [Technical Requirements](.agent/.clinerules/technical-requirements.md) for detailed technical specifications.
+See [Technical Requirements](docs/technical-requirements.md) for detailed technical specifications.
 
 **Summary**:
 - Static HTML5, CSS3, vanilla JavaScript
@@ -62,7 +62,7 @@ See [Technical Requirements](.agent/.clinerules/technical-requirements.md) for d
 
 ## 5. Current Phase: MVP
 
-See [Phase 1 MVP Plan](.agent/plans/phase-1-mvp.md) for complete requirements and checklist.
+See [Phase 1 MVP Plan](.plans/phase-1-mvp.md) for complete requirements and checklist.
 
 **Key Deliverables**:
 - Hero section with logo and value proposition
@@ -73,7 +73,7 @@ See [Phase 1 MVP Plan](.agent/plans/phase-1-mvp.md) for complete requirements an
 
 ## 6. Future Roadmap
 
-See [Future Phases](.agent/plans/future-phases.md) for detailed expansion plans.
+See [Future Phases](.plans/future-phases.md) for detailed expansion plans.
 
 **Upcoming**:
 - Phase 2: Enhanced content (services, case studies, testimonials)
@@ -157,31 +157,7 @@ Scale: 8, 16, 24, 32, 48, 64, 96, 128px
 - Contact information block
 - Footer with copyright and links
 
-## 9. File Structure
-
-See [File Organization Plan](.agent/plans/00-file-organization.md) for detailed organization strategy.
-
-**Current Structure**:
-```
-evergraytech_com/
-├── .agent/                     # Development guidelines and plans
-│   ├── .clinerules/           # Development workflow and requirements
-│   └── plans/                 # Phase plans and organization
-├── index.html                  # Main landing page
-├── styles.css                  # Global styles
-├── images/
-│   └── evergray_tech.svg      # Logo
-├── RoseAllenM_resume.pdf      # Resume download
-├── SYSTEM_SPEC.md             # This document
-├── README.md                  # Project documentation
-├── LICENSE                    # License information
-├── CNAME                      # Domain configuration
-└── .gitignore                 # Git ignore rules
-```
-
-## 10. Development Guidelines
-
-See [Development Workflow](.agent/.clinerules/development-workflow.md) for complete development standards and processes.
+## 9. Development Guidelines
 
 **Key Principles**:
 - Spec-driven development
@@ -189,7 +165,7 @@ See [Development Workflow](.agent/.clinerules/development-workflow.md) for compl
 - Version control best practices
 - Iterative deployment and monitoring
 
-## 11. Constraints and Considerations
+## 10. Constraints and Considerations
 
 ### Must Have
 - Professional appearance that builds trust
@@ -221,7 +197,7 @@ See [Development Workflow](.agent/.clinerules/development-workflow.md) for compl
 - Content management system
 - Multi-language support
 
-## 12. Risks and Mitigations
+## 11. Risks and Mitigations
 
 | Risk | Impact | Mitigation |
 |------|--------|------------|
@@ -233,25 +209,11 @@ See [Development Workflow](.agent/.clinerules/development-workflow.md) for compl
 | Hard to maintain | Low | Simple tech stack, well-documented code |
 | GitHub Pages limitations | Low | Plan AWS migration path, keep portable |
 
-## 13. Related Documents
+## 12. Related Documents
 
-### Development Guidelines
-- [Technical Requirements](.agent/.clinerules/technical-requirements.md)
-- [Development Workflow](.agent/.clinerules/development-workflow.md)
+### Guides and Documentations
+Project and developer facing guides are found in the [docs](docs) directory.
 
 ### Project Plans
-- [File Organization Plan](.agent/plans/00-file-organization.md)
-- [Phase 1 MVP](.agent/plans/phase-1-mvp.md)
-- [Future Phases](.agent/plans/future-phases.md)
-
-### Project Files
-- README.md: Project overview and setup instructions
-- LICENSE: Project license information
-- RoseAllenM_resume.pdf: Professional resume
-
-### Repository
-- GitHub: git@github.com:EverGrayTech/evergraytech_com.git
-
-## 14. Revision History
-- v1.1 (2026-02-21): Reorganized content into .agent/ structure, reduced repetition
-- v1.0 (2026-02-21): Initial specification for Phase 1 MVP
+All project plans as in the [.plans](.plans) directory.
+* "XX" plans are unprioritize and unscheduled

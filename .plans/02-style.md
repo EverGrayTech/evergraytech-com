@@ -1,8 +1,5 @@
-# Style Improvement Plan - EverGray Tech Website
+# Plan: Style Improvement Plan - EverGray Tech Website
 
-**Plan ID**: 02-style  
-**Created**: 2026-02-23  
-**Status**: Complete  
 **Design Direction**: Elegant & Sophisticated - High-end consultancy aesthetic
 
 ## Executive Summary
@@ -754,7 +751,7 @@ a {
 
 ## References
 
-- **SYSTEM_SPEC.md**: Core vision and design system
+- **system-spec.md**: Core vision and design system
 - **WCAG 2.1 Guidelines**: https://www.w3.org/WAI/WCAG21/quickref/
 - **Inter Font**: https://rsms.me/inter/
 - **Color Contrast Checker**: https://webaim.org/resources/contrastchecker/
