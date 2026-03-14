@@ -1,0 +1,78 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --color-accent-gradient-stop1: #A21534; /** Burgundy — gradient start (from logo) */
+  --color-accent-gradient-stop2: #0F263D; /** Dark navy — gradient midpoint (from logo) */
+  --color-accent-gradient-stop3: #3A7ABB; /** Blue — gradient end (from logo) */
+  --color-accent-solid: #3A7ABB; /** Fallback for contexts where gradients are impractical */
+  --color-accent-solid-hover: #4A8BCC; /** Hover state for solid accent */
+  --color-accent-solid-muted: #2A5A8A; /** Subdued accent for less prominent interactive elements */
+  --color-border-edge: rgba(255, 255, 255, 0.06); /** Faint surface-edge glint — restrained, not an explicit outline */
+  --color-border-divider: rgba(255, 255, 255, 0.10); /** Structural separator — slightly more deliberate than edge */
+  --color-border-focus: rgba(255, 255, 255, 0.25); /** Keyboard-focus ring — must remain obvious for accessibility */
+  --color-neutral-canvas: #121216; /** Deepest background — page-level canvas */
+  --color-neutral-chrome: #1a1a1f; /** Application frame, navigation, sidebars */
+  --color-neutral-surface: #222228; /** Standard panels and content areas */
+  --color-neutral-elevated: #2a2a31; /** Raised elements — popovers, dropdowns, tooltips */
+  --color-neutral-overlay: #32323a; /** Modal backdrops and highest-layer surfaces */
+  --color-semantic-success-foreground: #34C775;
+  --color-semantic-success-background: #162E1F;
+  --color-semantic-warning-foreground: #D4952A;
+  --color-semantic-warning-background: #2A2214;
+  --color-semantic-error-foreground: #D64545;
+  --color-semantic-error-background: #2E1616;
+  --color-semantic-info-foreground: #5B9FD6;
+  --color-semantic-info-background: #162230;
+  --color-text-primary: #e8e8ed; /** Default body and heading text */
+  --color-text-secondary: #a0a0a9; /** Supporting text, descriptions, metadata */
+  --color-text-tertiary: #6e6e78; /** Placeholder text, subtle labels */
+  --color-text-disabled: #4a4a53; /** Inactive or unavailable text */
+  --color-text-inverse: #121216; /** Text on light or accent backgrounds */
+  --motion-duration-instant: 75ms; /** Micro-feedback — toggles, checkboxes, pressed states */
+  --motion-duration-fast: 150ms; /** Standard interaction feedback — hover, focus, small state changes */
+  --motion-duration-normal: 250ms; /** Transitions — panels, reveals, selection changes */
+  --motion-duration-slow: 400ms; /** Deliberate entrances — modals, page-level transitions */
+  --motion-easing-default: cubic-bezier(0.25, 0.1, 0.25, 1.0); /** Subtle, physically plausible — standard for most transitions */
+  --motion-easing-in: cubic-bezier(0.4, 0.0, 1.0, 1.0); /** Accelerating exit */
+  --motion-easing-out: cubic-bezier(0.0, 0.0, 0.2, 1.0); /** Decelerating entrance */
+  --motion-easing-in-out: cubic-bezier(0.4, 0.0, 0.2, 1.0); /** Symmetric — position shifts, layout reflows */
+  --radii-none: 0px;
+  --radii-sm: 2px;
+  --radii-md: 4px;
+  --radii-lg: 6px;
+  --radii-xl: 8px;
+  --radii-full: 9999px; /** Pill shapes and circular elements only */
+  --spacing-2xs: 2px;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 24px;
+  --spacing-2xl: 32px;
+  --spacing-3xl: 48px;
+  --spacing-4xl: 64px;
+  --spacing-5xl: 96px;
+  --typography-family-sans: 'Inter', system-ui, -apple-system, sans-serif; /** Primary typeface — contemporary technical sans with strong screen readability */
+  --typography-family-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace; /** Secondary — selective use for technical affordances and data elements */
+  --typography-size-xs: 0.75rem;
+  --typography-size-sm: 0.875rem;
+  --typography-size-base: 1rem;
+  --typography-size-md: 1.125rem;
+  --typography-size-lg: 1.25rem;
+  --typography-size-xl: 1.5rem;
+  --typography-size-2xl: 2rem;
+  --typography-size-3xl: 2.5rem;
+  --typography-size-4xl: 3.5rem; /** Website hero headlines — not typical in application UI */
+  --typography-weight-regular: 400;
+  --typography-weight-medium: 500;
+  --typography-weight-semibold: 600;
+  --typography-weight-bold: 700;
+  --typography-line-height-tight: 1.2;
+  --typography-line-height-normal: 1.5;
+  --typography-line-height-relaxed: 1.65;
+  --typography-letter-spacing-tight: -0.01em;
+  --typography-letter-spacing-normal: 0em;
+  --typography-letter-spacing-wide: 0.04em; /** All-caps labels, overlines */
+}
