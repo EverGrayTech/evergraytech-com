@@ -1,0 +1,17 @@
+{
+  "name": "evergraytech-com",
+  "version": "0.2.0",
+  "private": true,
+  "description": "The EverGray Tech marketing website — evergraytech.com",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EverGrayTech/evergraytech-com.git"
+  },
+  "scripts": {
+    "sync:design-system": "mkdir -p vendor/design-system && cp node_modules/@evergraytech/design-system/dist/variables.css vendor/design-system/ && cp node_modules/@evergraytech/design-system/dist/logo.svg vendor/design-system/ && echo 'Design system assets synced to vendor/design-system/'"
+  },
+  "dependencies": {
+    "@evergraytech/design-system": "^0.1.0"
+  }
+}

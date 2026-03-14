@@ -1,0 +1,22 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@evergraytech/design-system':
+        specifier: ^0.1.0
+        version: 0.1.0
+
+packages:
+
+  '@evergraytech/design-system@0.1.0':
+    resolution: {integrity: sha512-pMEmLtKDUS7HznrQAsGF0rrMTnYXevR323tyTWbssGQyYR4N/H8SRQgCS1rdcMb2SmHH83IRvjnPus1Qb0cZ/w==, tarball: https://npm.pkg.github.com/download/@evergraytech/design-system/0.1.0/821b4e96381595d36bb35b7fc0fe419437af6d09}
+
+snapshots:
+
+  '@evergraytech/design-system@0.1.0': {}

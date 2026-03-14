@@ -49,6 +49,9 @@ docs/src/*
 .DS_Store
 Thumbs.db
 
+# Node
+node_modules/
+
 # Virtual Environments
 ENV/
 .venv
