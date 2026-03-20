@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore EverGray Tech applications, including Plot Your Path — a local-first career intelligence workspace for clearer role search and growth decisions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://evergraytech.com/apps">
+    <meta property="og:title" content="EverGray Tech Apps">
+    <meta property="og:description" content="Explore EverGray Tech applications, including Plot Your Path.">
+    <meta property="og:image" content="https://evergraytech.com/vendor/design-system/logo.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="EverGray Tech Apps">
+    <meta name="twitter:description" content="Explore EverGray Tech applications, including Plot Your Path.">
+    <title>Apps | EverGray Tech</title>
+    <link rel="icon" type="image/svg+xml" href="/vendor/design-system/logo.svg">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container site-header-inner">
+            <a href="/" class="site-brand" aria-label="EverGray Tech home">
+                <img src="/vendor/design-system/logo.svg" alt="" class="site-brand-logo">
+                <span class="site-brand-text">EverGray Tech</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Primary">
+                <a href="/#about" class="site-nav-link">About</a>
+                <a href="/apps" class="site-nav-link" aria-current="page">Apps</a>
+                <a href="/#contact" class="site-nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero--compact" aria-labelledby="apps-title">
+            <div class="container">
+                <div class="hero-content hero-content--left">
+                    <p class="section-eyebrow">Apps</p>
+                    <h1 id="apps-title" class="hero-title">Software built to support clearer decisions and stronger workflows.</h1>
+                    <p class="hero-intro">Explore practical EverGray Tech applications designed to help people and teams work with more confidence, structure, and momentum.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="apps-section" aria-labelledby="apps-list-title">
+            <div class="container">
+                <h2 id="apps-list-title" class="section-title reveal">Current Apps</h2>
+                <p class="section-subtitle reveal" data-delay="1">Browse live EverGray Tech applications and open a dedicated details page for each one.</p>
+
+                <div class="app-grid reveal" data-delay="2">
+                    <article class="app-card">
+                        <div class="app-card-content">
+                            <p class="app-card-status">MVP</p>
+                            <h3 class="app-card-title">Plot Your Path</h3>
+                            <p class="app-card-tagline">A local-first career intelligence workspace for clearer role search and growth decisions.</p>
+                            <p class="app-card-description">Evaluate opportunities, prepare stronger applications and interviews, capture reusable career evidence, and identify skill gaps over time.</p>
+                        </div>
+
+                        <div class="app-card-actions">
+                            <a href="/apps/plot-your-path" class="button-secondary">View Details</a>
+                            <a href="https://plot.evergraytech.com" class="cta-button" target="_blank" rel="noopener noreferrer">Open App</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2026 EverGray Tech. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/company/EverGrayTech" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Company Profile">LinkedIn</a>
+                <a href="mailto:hello@EverGrayTech.com" aria-label="Email EverGray Tech">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            if (!('IntersectionObserver' in window)) return;
+
+            const observer = new IntersectionObserver(
+                function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                {
+                    threshold: 0.12,
+                    rootMargin: '0px 0px -40px 0px'
+                }
+            );
+
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                observer.observe(el);
+            });
+        })();
+    </script>
+</body>
+</html>
