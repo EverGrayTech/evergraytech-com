@@ -31,6 +31,12 @@ git commit -m "chore: update design system to vX.Y.Z"
   2. Request it upstream if no token fits
   3. Document the local override with a tracking comment if urgent: `/* TODO: upstream to design system — see #XX */`
 
+## Run the app locally
+
+```bash
+npx serve . -l 8000
+```
+
 ## Quality Standards
 
 ### Code Quality
