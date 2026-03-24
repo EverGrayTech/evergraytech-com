@@ -236,6 +236,10 @@ section + section {
     border-top: 1px solid var(--color-border-edge);
 }
 
+.hero + .apps-section {
+    border-top: 0;
+}
+
 /* ============================================
    Buttons — CTA Hierarchy
    ============================================
@@ -606,9 +610,12 @@ section + section {
 /* ============================================
    Apps Pages
    ============================================ */
-.apps-section,
-.app-detail {
+.apps-section {
     background: transparent;
+}
+
+.apps-section {
+    padding-top: 0;
 }
 
 .app-grid {
@@ -617,11 +624,27 @@ section + section {
     gap: var(--spacing-2xl);
 }
 
-.app-card,
-.app-meta-card {
+.app-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--color-border-edge);
     border-radius: var(--radii-xl);
+}
+
+.app-runtime-message {
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--color-border-edge);
+    border-radius: var(--radii-lg);
+    color: var(--color-text-secondary);
+}
+
+.app-runtime-message--success {
+    border-color: var(--color-border-divider);
+}
+
+.app-runtime-message--error {
+    border-color: var(--color-accent-solid-muted);
 }
 
 .app-card {
@@ -646,9 +669,47 @@ section + section {
     margin-bottom: var(--spacing-lg);
 }
 
+.app-card-brand {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.app-card-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
 .app-card-tagline,
 .app-card-description {
     color: var(--color-text-secondary);
+}
+
+.app-card-capabilities {
+    list-style: none;
+    display: grid;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+.app-card-capabilities li {
+    color: var(--color-text-secondary);
+    padding-left: var(--spacing-xl);
+    position: relative;
+}
+
+.app-card-capabilities li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--color-accent-solid-muted);
 }
 
 .app-card-actions,
@@ -658,50 +719,6 @@ section + section {
     gap: var(--spacing-lg);
 }
 
-.app-detail-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
-    gap: var(--spacing-3xl);
-    align-items: start;
-}
-
-.capabilities-list {
-    list-style: none;
-    display: grid;
-    gap: var(--spacing-lg);
-}
-
-.capabilities-list li {
-    padding: var(--spacing-xl) var(--spacing-2xl);
-    background: rgba(255, 255, 255, 0.03);
-    border-left: 2px solid var(--color-accent-solid-muted);
-    border-radius: var(--radii-sm);
-    color: var(--color-text-secondary);
-}
-
-.app-meta-card {
-    padding: var(--spacing-2xl);
-}
-
-.app-meta-list {
-    display: grid;
-    gap: var(--spacing-xl);
-    margin-bottom: var(--spacing-2xl);
-}
-
-.app-meta-list dt {
-    font-size: var(--typography-size-xs);
-    font-weight: var(--typography-weight-semibold);
-    color: var(--color-text-tertiary);
-    text-transform: uppercase;
-    letter-spacing: var(--typography-letter-spacing-wide);
-    margin-bottom: var(--spacing-sm);
-}
-
-.app-meta-list dd {
-    color: var(--color-text-secondary);
-    margin: 0;
-}
 
 /* ============================================
    Footer
@@ -843,12 +860,7 @@ section + section {
         text-align: left;
     }
 
-    .app-detail-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .app-card,
-    .app-meta-card {
+    .app-card {
         padding: var(--spacing-2xl);
     }
 

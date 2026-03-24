@@ -38,31 +38,16 @@
                 <div class="hero-content hero-content--left">
                     <p class="section-eyebrow">Apps</p>
                     <h1 id="apps-title" class="hero-title">Software built to support clearer decisions and stronger workflows.</h1>
-                    <p class="hero-intro">Explore practical EverGray Tech applications designed to help people and teams work with more confidence, structure, and momentum.</p>
                 </div>
             </div>
         </section>
 
-        <section class="apps-section" aria-labelledby="apps-list-title">
+        <section class="apps-section" aria-label="Current Apps">
             <div class="container">
-                <h2 id="apps-list-title" class="section-title reveal">Current Apps</h2>
-                <p class="section-subtitle reveal" data-delay="1">Browse live EverGray Tech applications and open a dedicated details page for each one.</p>
-
-                <div class="app-grid reveal" data-delay="2">
-                    <article class="app-card">
-                        <div class="app-card-content">
-                            <p class="app-card-status">MVP</p>
-                            <h3 class="app-card-title">Plot Your Path</h3>
-                            <p class="app-card-tagline">A local-first career intelligence workspace for clearer role search and growth decisions.</p>
-                            <p class="app-card-description">Evaluate opportunities, prepare stronger applications and interviews, capture reusable career evidence, and identify skill gaps over time.</p>
-                        </div>
-
-                        <div class="app-card-actions">
-                            <a href="/apps/plot-your-path" class="button-secondary">View Details</a>
-                            <a href="https://plot.evergraytech.com" class="cta-button" target="_blank" rel="noopener noreferrer">Open App</a>
-                        </div>
-                    </article>
+                <div id="apps-directory-status" class="app-runtime-message reveal" aria-live="polite">
+                    Loading app catalog…
                 </div>
+                <div id="apps-directory" class="app-grid reveal" data-delay="1"></div>
             </div>
         </section>
     </main>
@@ -76,29 +61,67 @@
             </div>
         </div>
     </footer>
-
+    <script src="/apps/app-registry.js"></script>
+    <script src="/apps/apps-data.js"></script>
     <script>
         (function () {
-            if (!('IntersectionObserver' in window)) return;
+            const appsDirectory = document.getElementById('apps-directory');
+            const statusMessage = document.getElementById('apps-directory-status');
+            const registry = window.EverGrayTechAppsData.getAppRegistry();
 
-            const observer = new IntersectionObserver(
-                function (entries) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('is-visible');
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                },
-                {
-                    threshold: 0.12,
-                    rootMargin: '0px 0px -40px 0px'
-                }
-            );
+            function renderAppCard(app) {
+                const logoMarkup = app.assets.logo
+                    ? '<img src="' + window.EverGrayTechAppsData.escapeHtml(app.assets.logo) + '" alt="" class="app-card-logo">'
+                    : '';
+                const outcomes = app.overview && app.overview.outcomes && Array.isArray(app.overview.outcomes.items)
+                    ? app.overview.outcomes.items.slice(0, 4)
+                    : [];
+                const outcomesMarkup = outcomes.length
+                    ? '<ul class="app-card-capabilities">' + outcomes.map(function (item) {
+                        return '<li>' + window.EverGrayTechAppsData.escapeHtml(item) + '</li>';
+                    }).join('') + '</ul>'
+                    : '';
 
-            document.querySelectorAll('.reveal').forEach(function (el) {
-                observer.observe(el);
-            });
+                return [
+                    '<article class="app-card">',
+                    '  <div class="app-card-content">',
+                    '      <div class="app-card-brand">',
+                    logoMarkup,
+                    '          <div>',
+                    '              <h3 class="app-card-title">' + window.EverGrayTechAppsData.escapeHtml(app.name) + '</h3>',
+                    '              <p class="app-card-status">' + window.EverGrayTechAppsData.escapeHtml(app.status) + ' - ' + window.EverGrayTechAppsData.escapeHtml(app.version) + '</p>',
+                    '          </div>',
+                    '      </div>',
+                    '      <h4 class="app-card-tagline">' + window.EverGrayTechAppsData.escapeHtml(app.tagline) + '</h4>',
+                    '      <p class="app-card-description">' + window.EverGrayTechAppsData.escapeHtml(app.shortDescription) + '</p>',
+                    outcomesMarkup,
+                    '  </div>',
+                    '  <div class="app-card-actions">',
+                    app.urls.app ? '      <a href="' + window.EverGrayTechAppsData.escapeHtml(app.urls.app) + '" class="cta-button" target="_blank" rel="noopener noreferrer">Open App</a>' : '',
+                    app.urls.repo ? '      <a href="' + window.EverGrayTechAppsData.escapeHtml(app.urls.repo) + '" class="button-secondary" target="_blank" rel="noopener noreferrer">View Repo</a>' : '',
+                    '  </div>',
+                    '</article>'
+                ].join('');
+            }
+
+            if (!registry.length) {
+                statusMessage.textContent = 'No apps are currently configured for the catalog.';
+                statusMessage.classList.add('app-runtime-message--error');
+                window.EverGrayTechAppsData.initRevealObserver();
+                return;
+            }
+
+            Promise.all(registry.map(window.EverGrayTechAppsData.fetchAppMetadata))
+                .then(function (apps) {
+                    appsDirectory.innerHTML = apps.map(renderAppCard).join('');
+                    statusMessage.remove();
+                    window.EverGrayTechAppsData.initRevealObserver();
+                })
+                .catch(function () {
+                    statusMessage.innerHTML = 'The live app catalog is temporarily unavailable. You can still <a href="https://plot.evergraytech.com" target="_blank" rel="noopener noreferrer">open Plot Your Path</a> directly.';
+                    statusMessage.classList.add('app-runtime-message--error');
+                    window.EverGrayTechAppsData.initRevealObserver();
+                });
         })();
     </script>
 </body>
