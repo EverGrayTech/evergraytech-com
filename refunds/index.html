@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review the EverGray Tech Refund Policy for software purchases and related support expectations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://evergraytech.com/refunds">
+    <meta property="og:title" content="Refund Policy | EverGray Tech">
+    <meta property="og:description" content="Review the EverGray Tech Refund Policy for software purchases and related support expectations.">
+    <meta property="og:image" content="https://evergraytech.com/vendor/design-system/logo.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Refund Policy | EverGray Tech">
+    <meta name="twitter:description" content="Review the EverGray Tech Refund Policy for software purchases and related support expectations.">
+    <title>Refund Policy | EverGray Tech</title>
+    <link rel="icon" type="image/svg+xml" href="/vendor/design-system/logo.svg">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container site-header-inner">
+            <a href="/" class="site-brand" aria-label="EverGray Tech home">
+                <img src="/vendor/design-system/logo.svg" alt="" class="site-brand-logo">
+                <span class="site-brand-text">EverGray Tech</span>
+            </a>
+
+            <nav class="site-nav" aria-label="Primary">
+                <a href="/#about" class="site-nav-link">About</a>
+                <a href="/apps" class="site-nav-link">Apps</a>
+                <a href="/#contact" class="site-nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero--compact" aria-labelledby="refunds-title">
+            <div class="container">
+                <div class="hero-content hero-content--left">
+                    <p class="section-eyebrow">Legal</p>
+                    <h1 id="refunds-title" class="hero-title">Refund Policy</h1>
+                    <p class="hero-intro hero-intro--left">This policy explains how EverGray Tech handles refund requests for software purchases, while keeping room for practical support and fair resolution when issues come up.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="legal-section" aria-labelledby="refunds-content-title">
+            <div class="container">
+                <div class="legal-content reveal">
+                    <p class="legal-updated"><strong>Last updated:</strong> March 2026</p>
+                    <h2 id="refunds-content-title" class="section-title section-title--left">Refund Overview</h2>
+
+                    <h3>1. General Policy</h3>
+                    <p>If you are not satisfied with an EverGray Tech software product, you may request a refund within 14 days of purchase.</p>
+
+                    <h3>2. Eligibility</h3>
+                    <p>Refund requests are reviewed on a case-by-case basis. EverGray Tech aims to be fair and reasonable, taking into account the nature of the issue, the timing of the request, and any relevant product or licensing circumstances.</p>
+
+                    <h3>3. Product Support First</h3>
+                    <p>If you encounter a bug, activation problem, or other product issue, please reach out first. In many cases, a quick support exchange can resolve the problem without the need for a refund.</p>
+
+                    <h3>4. Abuse Prevention</h3>
+                    <p>Refunds may be declined in cases of repeated refund requests, abuse of the policy, fraudulent activity, or misuse of license access. EverGray Tech will aim to apply this standard reasonably and in good faith.</p>
+
+                    <h3>5. Consulting and Custom Work</h3>
+                    <p>This Refund Policy applies to software products sold by EverGray Tech unless otherwise stated. Custom development, consulting, advisory services, or other bespoke client work may be governed by separate written agreements and are not automatically covered by this software refund policy.</p>
+
+                    <h3>6. How to Request a Refund</h3>
+                    <p>To request a refund, email <a href="mailto:Support@EverGrayTech.com">Support@EverGrayTech.com</a> and include your purchase details along with a brief description of the issue or reason for the request.</p>
+
+                    <h3>7. Processing</h3>
+                    <p>Approved refunds are processed through the original payment provider. Timing may vary depending on the provider and payment method used.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">&copy; 2026 EverGray Tech. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="/terms">Terms</a>
+                <a href="/refunds" aria-current="page">Refunds</a>
+                <a href="https://www.linkedin.com/company/EverGrayTech" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Company Profile">LinkedIn</a>
+                <a href="mailto:hello@EverGrayTech.com" aria-label="Email EverGray Tech">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            if (!('IntersectionObserver' in window)) return;
+
+            const observer = new IntersectionObserver(
+                function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                {
+                    threshold: 0.12,
+                    rootMargin: '0px 0px -40px 0px'
+                }
+            );
+
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                observer.observe(el);
+            });
+        })();
+    </script>
+</body>
+</html>

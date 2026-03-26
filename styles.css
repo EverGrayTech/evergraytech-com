@@ -422,6 +422,11 @@ section + section {
     margin-right: auto;
 }
 
+.hero-intro--left {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 /* ============================================
    About Section
    ============================================ */
@@ -717,6 +722,33 @@ section + section {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-lg);
+}
+
+
+/* ============================================
+   Legal Pages
+   ============================================ */
+.legal-section {
+    padding-top: 0;
+}
+
+.legal-content {
+    max-width: 800px;
+}
+
+.legal-updated {
+    color: var(--color-text-tertiary);
+    font-size: var(--typography-size-sm);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.legal-content h3 {
+    margin-top: var(--spacing-3xl);
+    margin-bottom: var(--spacing-lg);
+}
+
+.legal-content p + p {
+    margin-top: var(--spacing-lg);
 }
 
 
